@@ -1,5 +1,5 @@
 --don't crash if not in crafter client
-for _,r in pairs(minetest.get_csm_restrictions()) do 
+for _,r in pairs(minetest.get_csm_restrictions()) do
 	if r == true then
 		return
 	end
@@ -8,8 +8,9 @@ if not minetest.get_node_def("client_version_checker:this_is_the_signature_of_cr
 	return
 end
 
-nodes = nil
-function initialize_all()
+local nodes
+
+local function initialize_all()
 	--declare globals for now
 
 	--next we load everything seperately because it's easier to work on individual files than have everything jammed into one file
@@ -28,6 +29,7 @@ function initialize_all()
 	dofile(path.."/sleeping.lua")
 end
 
+-- todo! this needs to be a loop not a recursion!
 --we must delay initialization until the player exists in the world
 local function recursive_startup_attempt()
 	local ready_to_go = minetest.localplayer
