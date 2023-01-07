@@ -197,13 +197,12 @@ local function update_weather()
 		update_weather()
 	end)
 end
-
 minetest.register_on_modchannel_message(function(channel_name, sender, message)
 	--receive the initial packet which tells the client which nodes
 	--to spawn weather columns on
 	if sender == "" and channel_name == "weather_nodes" then
 		all_nodes = minetest.deserialize(message)
-		nodes = {}
+        nodes = {}
 		for _,key in pairs(all_nodes) do
 			nodes[key] = true
 		end
