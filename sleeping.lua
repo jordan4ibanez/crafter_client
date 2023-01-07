@@ -5,9 +5,9 @@ local sleep_fade = 0
 local sleep_id = nil
 
 minetest.register_on_modchannel_message(function(channel_name, sender, message)
-	if sender == "" and channel_name == name..":sleep_channel" then
+    if sender == "" and channel_name == name..":sleep_channel" then
         sleeping = tonumber(message)
-	end
+    end
 end)
 
 

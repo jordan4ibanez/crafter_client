@@ -7,9 +7,9 @@ local fire_animation_timer = 0
 local fire_animation_tile = 0
 --receive the server states
 minetest.register_on_modchannel_message(function(channel_name, sender, message)
-	if sender == "" and channel_name == name..":fire_state" then
+    if sender == "" and channel_name == name..":fire_state" then
         on_fire = tonumber(message)
-	end
+    end
 end)
 
 minetest.register_globalstep(function(dtime)
@@ -21,11 +21,11 @@ minetest.register_globalstep(function(dtime)
     elseif on_fire == 1 then
         if fire_id == nil then
             fire_id = minetest.localplayer:hud_add({
-				hud_elem_type = "image", -- see HUD element types, default "text"
-				position = {x=0.5, y=0.5},
-				name = "",    -- default ""
-				scale = {x=-100, y=-100}, -- default {x=0,y=0}
-				text = "fire.png^[opacity:180^[verticalframe:8:"..fire_animation_tile,
+                hud_elem_type = "image", -- see HUD element types, default "text"
+                position = {x=0.5, y=0.5},
+                name = "",    -- default ""
+                scale = {x=-100, y=-100}, -- default {x=0,y=0}
+                text = "fire.png^[opacity:180^[verticalframe:8:"..fire_animation_tile,
             })
         else
             fire_animation_timer = fire_animation_timer + dtime
