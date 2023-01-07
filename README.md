@@ -1,9 +1,9 @@
 # crafter_client
- The clientside part of the crafter game
+ The clientside part of the Crafter game
 
- > Designed for Minetest 5.3.0-DEV
+ > Designed for Minetest 5.7.0-DEV
 
-<a href="https://github.com/oilboi/Crafter"> Here is the actual game </a>
+[Here is the actual game](https://github.com/jordan4ibanez/crafter)
 
 To install:
 
