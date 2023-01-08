@@ -106,6 +106,7 @@ local weather_effects = function(player,defined_type)
         collisiondetection = true,
         collision_removal = true,
         object_collision = false,
+        glow = 5,
         texture = "snowflake_"..math.random(1,2)..".png",
     }
     elseif defined_type == "ichor" then
