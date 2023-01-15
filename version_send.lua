@@ -3,8 +3,8 @@ local version_channel = minetest.mod_channel_join(name..":client_version_channel
 
 -- Storing a semantic versioning in a table like: {"alpha", 0.071}. This is serialized.
 local current_development_cycle = "alpha"
--- 0.0.7b
-local crafter_version = 0.071
+-- 0.0.8
+local crafter_version = 0.08
 
 -- The client needs to wait a few seconds for the server's mod channel to initialize in singleplayer
 minetest.after( 2,function()
