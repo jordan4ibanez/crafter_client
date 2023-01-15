@@ -4,7 +4,8 @@ for _,r in pairs(minetest.get_csm_restrictions()) do
         return
     end
 end
-if not minetest.get_node_def("client_version_checker:this_is_the_signature_of_crafter00111010010001000011110000110011") then
+
+if not minetest.get_node_def("crafter_client_version_checker:this_is_a_hack_to_not_crash_other_servers") then
     return
 end
 
